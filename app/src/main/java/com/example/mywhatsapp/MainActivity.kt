@@ -40,7 +40,7 @@ import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.example.mywhatsapp.ui.components.TopAppBarCustom
 import com.example.mywhatsapp.ui.screens.ChatsScreen
-import com.example.mywhatsapp.ui.screens.LlamadasScreen
+import com.example.mywhatsapp.ui.screens.SmileScreen
 import com.example.mywhatsapp.ui.screens.PauseStartScreen
 import com.example.mywhatsapp.ui.theme.MyWhatsAppTheme
 import kotlinx.coroutines.launch
@@ -106,7 +106,7 @@ fun MyWhatsApp(modifier: Modifier = Modifier) {
             when (page) {
                 0 -> ChatsScreen(Modifier)
                 1 -> PauseStartScreen(Modifier)
-                2 -> LlamadasScreen(Modifier)
+                2 -> SmileScreen(Modifier)
             }
         }
     }

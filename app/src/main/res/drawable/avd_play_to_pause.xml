@@ -9,5 +9,5 @@
     <target
         android:name="play2"
         android:animation="@animator/play2_to_pause2"/>
-        
+
 </animated-vector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_smile">
+    
+    <target
+        android:name="smile"
+        android:animation="@animator/smile_to_sad"/>
+        
+</animated-vector>

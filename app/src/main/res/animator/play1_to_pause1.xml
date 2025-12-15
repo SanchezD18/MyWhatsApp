@@ -6,3 +6,4 @@
     android:valueTo="M 6 5 L 6 19 L 10 19 L 10 5 Z"
     android:valueType="pathType"
     android:interpolator="@android:interpolator/fast_out_slow_in"/>
+

@@ -5,5 +5,9 @@
     <target
         android:name="crossPath"
         android:animation="@animator/path_morph_reverse"/>
+    
+    <target
+        android:name="rotationGroup"
+        android:animation="@animator/tick_cross_rotation_reverse"/>
         
 </animated-vector>
