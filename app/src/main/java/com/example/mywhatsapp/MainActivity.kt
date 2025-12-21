@@ -42,6 +42,7 @@ import com.example.mywhatsapp.ui.components.TopAppBarCustom
 import com.example.mywhatsapp.ui.screens.ChatsScreen
 import com.example.mywhatsapp.ui.screens.SmileScreen
 import com.example.mywhatsapp.ui.screens.PauseStartScreen
+import com.example.mywhatsapp.ui.screens.StarScreen
 import com.example.mywhatsapp.ui.theme.MyWhatsAppTheme
 import kotlinx.coroutines.launch
 
@@ -70,7 +71,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun MyWhatsApp(modifier: Modifier = Modifier) {
-    val titles = listOf("Chats", "Pause/Start", "Smile")
+    val titles = listOf("Chats", "Pause/Start", "Smile", "Star")
     val coroutineScope = rememberCoroutineScope()
     val pagerState = rememberPagerState(initialPage = 0, pageCount = { titles.size })
 
@@ -107,6 +108,7 @@ fun MyWhatsApp(modifier: Modifier = Modifier) {
                 0 -> ChatsScreen(Modifier)
                 1 -> PauseStartScreen(Modifier)
                 2 -> SmileScreen(Modifier)
+                3 -> StarScreen(Modifier)
             }
         }
     }

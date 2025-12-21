@@ -5,5 +5,13 @@
     <target
         android:name="smile"
         android:animation="@animator/smile_to_sad"/>
-        
+
+    <target
+        android:name="righteye_open"
+        android:animation="@animator/smiler_to_sadr"/>
+
+    <target
+        android:name="lefteye_open"
+        android:animation="@animator/smilel_to_sadl"/>
+
 </animated-vector>

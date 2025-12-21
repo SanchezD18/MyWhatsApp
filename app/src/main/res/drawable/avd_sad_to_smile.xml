@@ -6,4 +6,12 @@
         android:name="smile"
         android:animation="@animator/sad_to_smile"/>
 
+    <target
+        android:name="righteye_open"
+        android:animation="@animator/sadr_to_smiler"/>
+
+    <target
+        android:name="lefteye_open"
+        android:animation="@animator/sadl_to_smilel"/>
+
 </animated-vector>

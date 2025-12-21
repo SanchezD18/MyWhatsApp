@@ -22,23 +22,16 @@ import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.example.mywhatsapp.R
 
 @Composable
-fun SmileScreen(modifier: Modifier) {
+fun StarScreen(modifier: Modifier) {
     val context = LocalContext.current
-    var isSmile by remember { mutableStateOf(true) }
-    val animatedDrawable = remember(isSmile) {
+    var shouldAnimate by remember { mutableStateOf(false) }
+    
+    val animatedDrawable = remember {
         try {
             AnimatedVectorDrawableCompat.create(
                 context,
-                if (isSmile) R.drawable.avd_smile_to_sad else R.drawable.avd_sad_to_smile
-            )?.apply {
-                registerAnimationCallback(
-                    object : Animatable2Compat.AnimationCallback() {
-                        override fun onAnimationEnd(drawable: Drawable) {
-                            isSmile = !isSmile
-                        }
-                    }
-                )
-            }
+                R.drawable.avd_star_draw
+            )
         } catch (e: Exception) {
             e.printStackTrace()
             null
@@ -54,22 +47,25 @@ fun SmileScreen(modifier: Modifier) {
             factory = { ctx ->
                 ImageView(ctx).apply {
                     scaleType = ImageView.ScaleType.FIT_CENTER
-                    setImageResource(
-                        if (isSmile) R.drawable.ic_smile else R.drawable.ic_smile
-                    )
+                    setImageResource(R.drawable.ic_star)
                 }
             },
             update = { imageView ->
-                animatedDrawable?.let { drawable ->
-                    imageView.setImageDrawable(drawable)
-                } ?: run {
-                    val staticResId = if (isSmile) R.drawable.ic_smile else R.drawable.ic_smile
-                    imageView.setImageResource(staticResId)
+                if (shouldAnimate) {
+                    animatedDrawable?.let { drawable ->
+                        imageView.setImageDrawable(drawable)
+                        drawable.start()
+                    } ?: run {
+                        imageView.setImageResource(R.drawable.ic_star)
+                    }
+                } else {
+                    imageView.setImageResource(R.drawable.ic_star)
                 }
             },
             modifier = Modifier
                 .size(400.dp)
                 .clickable {
+                    shouldAnimate = true
                     try {
                         animatedDrawable?.start()
                     } catch (e: Exception) {

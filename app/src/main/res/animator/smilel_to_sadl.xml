@@ -2,9 +2,7 @@
 <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
     android:duration="300"
     android:propertyName="pathData"
-    android:valueFrom="M6.4,6.4 L17.6,17.6 M6.4,17.6 L17.6,6.4"
-    android:valueTo="M4.8,13.4 L9,17.6 M10.4,16.2 L19.6,7"
+    android:valueFrom="M 55,30 Q 65,30 75,30"
+    android:valueTo="M 55,30 Q 65,47 75,30"
     android:valueType="pathType"
-    android:interpolator="@android:interpolator/fast_out_slow_in"/>
-
-
+    android:interpolator="@android:interpolator/fast_out_slow_in" />

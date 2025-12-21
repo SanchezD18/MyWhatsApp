@@ -16,12 +16,24 @@
         android:pathData="M 35,40 m-7,0 a 7,7 0 1,0 14,0 a 7,7 0 1,0-14,0"/>
 
     <path
+        android:name="righteye_open"
+        android:fillColor="#FBE500"
+        android:pathData="M 25,30 Q 35,30 45,30"/>
+
+    <path
         android:name="lefteye"
         android:fillColor="#000000"
         android:pathData="M 65,40 m-7,0 a 7,7 0 1,0 14,0 a 7,7 0 1,0-14,0"/>
 
     <path
+        android:name="lefteye_open"
+        android:fillColor="#FBE500"
+        android:pathData="M 55,30 Q 65,30 75,30"/>
+
+    <path
         android:name="smile"
-        android:fillColor="#000000"
+        android:strokeWidth="2"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round"
         android:pathData="M 30,65 Q 50,85 70,65"/>
 </vector>
